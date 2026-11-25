@@ -561,7 +561,7 @@ function setMsg(t,err=false){ const el=document.getElementById('loadMsg'); el.te
 function transBonus(it){
   if(it.pubType!=='rec') return 0;
   const b=parseFloat(it.bonus);
-  return isNaN(b)?4:Math.min(Math.max(b,0),2);
+  return isNaN(b)?2:Math.min(Math.max(b,0),4); 
 }
 // ── Publication year of an item (manual items: it.year; fetched: work.publication_year) ──
 function itemYear(it){
