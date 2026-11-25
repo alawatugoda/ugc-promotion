@@ -557,11 +557,11 @@ async function fetchAll(){
 }
 function setMsg(t,err=false){ const el=document.getElementById('loadMsg'); el.textContent=t; el.className='load-msg'+(err?' err':''); }
 
-// ── §2.2.4 bonus: recognized publisher → 0–4 (default 4); other → 0 ──
+// ── §2.2.4 bonus: recognized publisher → 0–2 (default 2); other → 0 ──
 function transBonus(it){
   if(it.pubType!=='rec') return 0;
   const b=parseFloat(it.bonus);
-  return isNaN(b)?4:Math.min(Math.max(b,0),4);
+  return isNaN(b)?4:Math.min(Math.max(b,0),2);
 }
 // ── Publication year of an item (manual items: it.year; fetched: work.publication_year) ──
 function itemYear(it){
